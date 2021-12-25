@@ -1,0 +1,138 @@
+*{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0; box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+header{
+    width: 100%; height: 100vh;
+}
+nav{
+    width: 100%; height: 15vh;
+    background:green;
+    color: white; display: flex; justify-content: space-between;
+    align-items: center; text-transform: uppercase;
+}
+nav .logo{
+    width:25%; text-align: center; /*background: red;*/
+}nav .menu{
+    width: 40%; display: flex; justify-content: space-around;
+}
+
+nav .menu a{
+    width: 25%; 
+    text-decoration: none; color:white;
+    font-weight: bold;
+}
+
+nav .menu a:first-child{
+    color: #00b894;
+}
+
+
+main{
+    width: 100%;
+    height: 85vh;
+    display: flex; justify-content: center; align-items: center; 
+    text-align: center; color:white;
+}
+ section h3{
+     font-size: 35px; font-weight: 200; letter-spacing: 3px; 
+     text-shadow: 1px 1px 2px black;
+     color: aquas;
+ }
+ section h1{
+     margin: 30px 0 20px 0;
+     font-size: 55px;
+     font-weight: 700;
+     text-shadow: 2px 1px 5px black;
+     text-transform: uppercase;
+     color: blue;
+ }
+ section p{
+     font-size: 25px;  word-spacing: 2px; margin-bottom: 25px;
+     text-shadow: 1px 1px 1px black;
+ }
+
+ section a{
+     padding: 12px 30px;
+     border-radius: 4px;
+     outline: none;
+     text-transform: uppercase;
+     font-size: 13px;
+     font-weight: 500;
+     text-decoration: none;
+     letter-spacing: 1px;
+     transition: all .5s ease;
+ }
+
+ section .button{
+    background:#00b894;
+    color:rgb(211, 97, 32);
+    color: black;
+}
+ section .btnone{
+     background:#00b894;
+     color:green;
+ }
+.btnone:hover{
+    background: #00b894;
+    color: white
+
+}
+
+section .btntwo{
+     background: #00b894;
+     color:white;
+ }
+
+ .btntwo:hover{
+    background:#00b894;
+    color:green
+
+ }
+ .change_content:after{
+     content: '' ;
+     animation: changetext 10s infinite linear;
+     color: #11f8ca;
+ }
+
+
+@keyframes  changetext{
+    0%{content:"Bihar";}
+    20%{content:"Telangana";}
+    35%{content:"Goa";}
+    60%{content:"Mumbai";}
+    80%{content:"Jaipur";}
+    90%{content:"Kerla";}   
+    100%{content:"Agra";} 
+}
+h2{
+    background: red;
+    text-align: center;
+}
+.int{
+    background-color: yellow;
+}
+/* Footer */
+.footer {
+    left: 5;
+    margin-top: 20;
+    width: 100%;
+    height: 60px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+ }
+ p{
+     text-align: center;
+     color: black;
+     margin-top: 20;
+     font-size: 40px;
+ }
+
+
+
+

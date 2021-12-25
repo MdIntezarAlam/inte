@@ -1,0 +1,169 @@
+<html lang="en">
+<head>
+    <!-- Step one To Add Bootstrap's From Google -->
+    <!--Here I am Using Bootstrap's From Google  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Inteernal css -->
+    <style>
+      .nav a{
+         text-align: center;
+         text-decoration: none;
+         text-shadow: red;
+         margin: 18px;
+         font-size:50px;
+         height: 98px;
+      }
+    </style>
+</head>
+<body>
+    <!-- This is Navbar -->
+    <div class="nav">
+    <nav>
+        <a href="Index.html">Home</a>
+    </nav>
+</div>
+    <!-- Step Two Create HTML Structure   -->
+    <!-- This is The main Container of Entier Html -->
+    <div class="continer"><br>
+        <!-- This is the heading Tag For FormValidation -->
+        <h1 class="text-success text-center"> Complete Form Validation in Javascript</h1><br>
+        <div class="col-lg-8 m-auto d-block">
+            <!-- This is the Form -->
+            <form action="#" onsubmit="return validation()" class="bg-light">
+                <!-- User name -->
+                <div class="form-group">
+                    <label>Username:</label>
+                    <input type="text" name="user" class="form-control" id="user" autocomplete="off">
+                    <!-- Create Span tage For show Error -->
+                    <span id="username" class="text-danger font-weight-bold"></span>
+                </div>
+                <!-- This is password -->
+
+                <div class="form-group">
+                    <label>password:</label>
+                    <input type="text" name="pass" class="form-control" id="pass" autocomplete="off">
+                    <!-- Create Span tage For show Error -->
+                    <span id="password" class="text-danger font-weight-bold"></span>
+                </div>
+
+                <!--This is For confirm Password -->
+                <div class="form-group">
+                    <label>Confirm password:</label>
+                    <input type="text" name="conpass" class="form-control" id="conpass" autocomplete="off">
+                    <!-- Create Span tage For show Error -->
+                    <span id="confirmpass" class="text-danger font-weight-bold"></span>
+                </div>
+                <!--This is Mobile Number -->
+                <div class="form-group">
+                    <label>Mobile Number:</label>
+                    <input type="text" name="mobile" class="form-control" id="mobile Number" autocomplete="off">
+                    <!-- Create Span tage For show Error -->
+                    <span id="mobileno" class="text-danger font-weight-bold"></span>
+                </div>
+                <!-- This is a  Email -->
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="text" name="Email" class="form-control" id="emails" autocomplete="off">
+                    <!-- Create Span tage For show Error -->
+                    <span id="emailid" class="text-danger font-weight-bold"></span>
+                </div>
+                <!-- This is a Bottom -->
+                <input type="submit" name="submit" value="submit" class="btn btn-success" autocomplete="off">
+                <input type="reset" name="reset" value="reset" class="btn btn-danger mx-3 my-3" autocomplete="off">
+
+            </form>
+        </div>
+    </div>
+    <!--  Step Three Use JavaScript For FormValidation-->
+    <script type="text/javascript">
+        // create One Function which are in the Form tag
+
+        function validation() {
+            //    create One Variable
+
+            var user = document.getElementById("user").value;
+            var pass = document.getElementById("pass").value;
+            var conpass = document.getElementById("conpass").value;
+            var mobileno = document.getElementById("mobile Number").value;
+            var emails = document.getElementById("emails").value;
+
+            //This is required For User Processes
+            //1.This Condition is Checking is Empty or Not
+            if (user == "") {
+                // username is span class name 
+                document.getElementById("username").innerHTML = "Please Fill Correct name";
+                return false;
+            }
+            //How Much We need user name we should define here 
+            if ((user.length <= 2) || (user.length > 20)) {
+                document.getElementById("username").innerHTML = "User lenghth Must be 2 nad 21";
+                return false;
+            }
+            if (!isNaN(user)) {
+                document.getElementById("username").innerHTML = "Only Character is allowed";
+                return false;
+            }
+            //This is required For Password Processes                  
+            //2.This Condition is Checking is Empty or Not
+            if (pass == "") {
+                // password is span class name 
+                document.getElementById("password").innerHTML = "Please Fill Correct password";
+                return false;
+            }
+            //How Much We need user name we should define here 
+            if ((pass.length <= 5) || (pass.length > 20)) {
+                document.getElementById("password").innerHTML = "password lenghth Must be 5 nad 21";
+                return false;
+            }
+            //    How to match pasword with Confirm Password
+            if (pass != conpass) {
+                document.getElementById("password").innerHTML = "password is not matching";
+                return false;
+            }
+            //3.This Condition is Checking is Empty or Not
+            if (conpass == "") {
+                // confirmpass is span class name 
+                document.getElementById("confirmpass").innerHTML = "Please Fill confirm Password ";
+                return false;
+            }
+            //4.This Condition is Checking is Empty or Not
+            if (mobileno == "") {
+                // mobileno is span class name 
+                document.getElementById("mobileno").innerHTML = "Please Fill Mobile No";
+                return false;
+            }
+            //This is required For Mobile no only They Can Enter MobileNo Processes
+            if (!isNaN(mobileno)) {
+                document.getElementById("mobileno").innerHTML = "User must write Character";
+                return false;
+            }
+            //check  mobile no must be 10 digits
+            if (mobileno.length != 10) {
+                document.getElementById("mobileno").innerHTML = "mobile no must be 10 digit";
+                return false;
+            }
+            //5.This Condition is Checking is Empty or Not
+            if (emails == "") {
+                // emailid is span class name 
+                document.getElementById("emailid").innerHTML = "Please Fill Correct Email";
+                return false;
+            }
+            //This is required For Email Processes
+            if (emails.indexOf('@') <= 0) {
+                document.getElementById("emailid").innerHTML = " ** @ Invalid position";
+                return false;
+            }
+            if ((emails.charAt(emails.length - 4) != '.') && (emails.charAt(emails.length - 4) != '.')) {
+                document.getElementById("emailid").innerHTML = ". Invalid position";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

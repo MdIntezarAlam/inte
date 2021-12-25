@@ -1,0 +1,119 @@
+body{  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+    background-image: url("..//int/lap.jpg");  
+    max-width: 100%; 
+   background-repeat: no-repeat;
+   background-position: 10% 10%;
+   background-size: cover; 
+} 
+.nav nav a{
+ margin: 20px;
+ font-size:45px;
+}
+.nav a{
+  text-align: center;
+  text-decoration: none;
+  float: right;
+  color: white;
+  margin: 18px;
+  font-size:50px;
+  height: 98px;
+  /* opacity: 0.5; */
+}
+a:hover{
+ opacity: 0.5;
+}
+/* Hover */
+main{
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+    align-items: center; 
+   text-align: center; 
+   color:white;
+}
+section h2{
+    font-size: 80px;
+    font-weight: 50; 
+    letter-spacing: 3px; 
+    text-shadow: 1px 1px 2px black;
+    color: white;
+}
+section h3{
+     margin: 0px 0 0px 0; 
+     font-size: 135px;
+     letter-spacing: 3px; 
+     font-weight: 50; 
+     text-shadow: 2px 1px 5px black; 
+     color: white;
+} 
+section h1{
+   margin: 10px 0 20px 0;
+   font-size: 55px;
+   font-weight: 700;
+   text-shadow: 2px 1px 5px black;
+}
+.change_content:after{
+   content: ' ' ;
+   animation: changetext 15s infinite linear;
+   color:#11f8ca ;
+}
+
+@keyframes  changetext{
+   40%{content:"Computer Science Engineer";}
+   20%{content:"front end Developer";}
+   35%{content:"Javascript Developer";}
+   60%{content:"React Js Developer";}
+   80%{content:"Blogger";}
+   90%{content:"Freelancer";}   
+}
+
+/* This is All Buttons of Social media  */
+.fa {
+   padding: 16px;
+   margin-top: 90px;
+   font-size: 30px;
+   width: 60px;
+   text-align: center;
+   text-decoration: none;
+ }
+ .fa:hover {
+   opacity: 0.5;
+}
+/*  instagram*/
+.fa-instagram {
+   background: #125688;
+   color: white;
+ }
+  /*  youtube*/
+ .fa-youtube {
+   background: #bb0000;
+   color: white;
+ }
+  /*  linkedin*/
+ .fa-linkedin {
+   background: #007bb5;
+   color: white;
+ }
+ /* Twitter */
+.fa-twitter {
+   background: #55ACEE;
+   color: white;
+ }
+ /* About me */
+ .about {
+   text-align: center;
+   font-size: 120px;
+   margin-bottom: 120px;
+ }
+.about a{
+ color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* Footer */
+h1{
+  text-align: center;
+}
